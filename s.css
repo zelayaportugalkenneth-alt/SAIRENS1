@@ -1,0 +1,246 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#0f172a,#1e293b,#334155);
+    overflow:hidden;
+    position:relative;
+  }
+  
+  /* Fondo animado */
+  
+  body::before,
+  body::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(80px);
+    opacity:0.4;
+  }
+  
+  body::before{
+    background:#00bfff;
+    top:-150px;
+    left:-150px;
+  }
+  
+  body::after{
+    background:#7c3aed;
+    bottom:-150px;
+    right:-150px;
+  }
+  
+  /* Contenedor principal */
+  
+  .login-container{
+    width:900px;
+    height:550px;
+    display:flex;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:25px;
+    backdrop-filter:blur(15px);
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+  }
+  
+  /* Lado izquierdo */
+  
+  .left-side{
+    flex:1;
+    background:linear-gradient(160deg,#2563eb,#7c3aed);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    position:relative;
+  }
+  
+  .left-side h1{
+    font-size:42px;
+    margin-bottom:15px;
+  }
+  
+  .left-side p{
+    text-align:center;
+    line-height:1.6;
+    opacity:0.9;
+    max-width:300px;
+  }
+  
+  /* Círculos decorativos */
+  
+  .circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.1);
+  }
+  
+  .circle:nth-child(1){
+    width:120px;
+    height:120px;
+    top:50px;
+    left:40px;
+  }
+  
+  .circle:nth-child(2){
+    width:180px;
+    height:180px;
+    bottom:40px;
+    right:30px;
+  }
+  
+  /* Formulario */
+  
+  .right-side{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    background:rgba(15,23,42,0.85);
+  }
+  
+  .form-box{
+    width:100%;
+    max-width:350px;
+  }
+  
+  .form-box h2{
+    color:white;
+    margin-bottom:30px;
+    font-size:32px;
+  }
+  
+  /* Inputs */
+  
+  .input-group{
+    margin-bottom:25px;
+    position:relative;
+  }
+  
+  .input-group input{
+    width:100%;
+    padding:15px 15px 15px 50px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:rgba(255,255,255,0.08);
+    color:white;
+    font-size:15px;
+    transition:0.3s;
+  }
+  
+  .input-group input:focus{
+    background:rgba(255,255,255,0.15);
+    box-shadow:0 0 10px rgba(59,130,246,0.5);
+  }
+  
+  .input-group i{
+    position:absolute;
+    top:50%;
+    left:15px;
+    transform:translateY(-50%);
+    color:#94a3b8;
+    font-size:18px;
+  }
+  
+  /* Opciones */
+  
+  .options{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:25px;
+    color:#cbd5e1;
+    font-size:14px;
+  }
+  
+  .options a{
+    color:#60a5fa;
+    text-decoration:none;
+  }
+  
+  /* Botón */
+  
+  .login-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#3b82f6,#7c3aed);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+  }
+  
+  .login-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(59,130,246,0.4);
+  }
+  
+  /* Redes sociales */
+  
+  .social-login{
+    margin-top:30px;
+    text-align:center;
+    color:#94a3b8;
+  }
+  
+  .social-icons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:15px;
+  }
+  
+  .social-icons div{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+  }
+  
+  .social-icons div:hover{
+    background:#3b82f6;
+    transform:scale(1.1);
+  }
+  
+  /* Responsive */
+  
+  @media(max-width:900px){
+  
+    .login-container{
+      flex-direction:column;
+      width:95%;
+      height:auto;
+    }
+  
+    .left-side{
+      padding:50px 20px;
+    }
+  
+    .right-side{
+      padding:40px 20px;
+    }
+  
+  }
